@@ -6,7 +6,7 @@
     <groupId>cc.mrbird</groupId>
     <artifactId>febs_shiro_jwt</artifactId>
     <version>1.0.0-release</version>
-    <packaging>jar</packaging>
+    <packaging>${app.packaging}</packaging>
 
     <name>febs_shiro_jwt</name>
     <description>FEBS_Shrio_JWT</description>
@@ -19,6 +19,8 @@
     </parent>
 
     <properties>
+        <active.profile>dev</active.profile>
+        <app.packaging>jar</app.packaging>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <java.version>1.8</java.version>
@@ -198,4 +200,47 @@
             </resource>
         </resources>
     </build>
+
+    <profiles>
+        <profile>
+            <id>snapshot</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+            <dependencies/>
+            <properties>
+                <app.packaging>jar</app.packaging>
+            </properties>
+        </profile>
+        <profile>
+            <id>dev</id>
+            <activation/>
+            <dependencies>
+                <dependency>
+                    <groupId>org.springframework.boot</groupId>
+                    <artifactId>spring-boot-starter-tomcat</artifactId>
+                    <scope>provided</scope>
+                </dependency>
+            </dependencies>
+            <properties>
+                <app.packaging>war</app.packaging>
+            </properties>
+        </profile>
+        <profile>
+            <id>test</id>
+            <activation>
+                <activeByDefault>false</activeByDefault>
+            </activation>
+            <dependencies>
+                <dependency>
+                    <groupId>org.springframework.boot</groupId>
+                    <artifactId>spring-boot-starter-tomcat</artifactId>
+                    <scope>provided</scope>
+                </dependency>
+            </dependencies>
+            <properties>
+                <app.packaging>war</app.packaging>
+            </properties>
+        </profile>
+    </profiles>
 </project>

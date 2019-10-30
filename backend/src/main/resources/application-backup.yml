@@ -2,9 +2,6 @@ server:
   port: 9527
 
 spring:
-  profiles:
-    active: dev
-
   datasource:
     dynamic:
       # 是否开启 SQL日志输出，生产环境建议关闭，有性能损耗
@@ -26,22 +23,22 @@ spring:
           password: Passw0rd!
           driver-class-name: com.mysql.cj.jdbc.Driver
           url: jdbc:mysql://127.0.0.1:3306/mrbird?useUnicode=true&characterEncoding=UTF-8&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
-#        # 数据源-2，名称为 slave_1
-#        slave_1:
-#          username: root
-#          password: 123456
-#          driver-class-name: com.mysql.cj.jdbc.Driver
-#          url: jdbc:mysql://127.0.0.1:3306/febs_test?useUnicode=true&characterEncoding=UTF-8&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
-#        # 数据源-3，名称为 slave_2
-#        slave_2:
-#          url: ENC(xxxxx) # 内置加密,使用请查看详细文档
-#          username: ENC(xxxxx)
-#          password: ENC(xxxxx)
-#          driver-class-name: com.mysql.jdbc.Driver
-#          schema: db/schema.sql # 配置则生效,自动初始化表结构
-#          data: db/data.sql # 配置则生效,自动初始化数据
-#          continue-on-error: true # 默认true,初始化失败是否继续
-#          separator: ";" # sql默认分号分隔符
+        # 数据源-2，名称为 slave_1
+        slave_1:
+          username: root
+          password: 123456
+          driver-class-name: com.mysql.cj.jdbc.Driver
+          url: jdbc:mysql://127.0.0.1:3306/febs_test?useUnicode=true&characterEncoding=UTF-8&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
+        # 数据源-3，名称为 slave_2
+        slave_2:
+          url: ENC(xxxxx) # 内置加密,使用请查看详细文档
+          username: ENC(xxxxx)
+          password: ENC(xxxxx)
+          driver-class-name: com.mysql.jdbc.Driver
+          schema: db/schema.sql # 配置则生效,自动初始化表结构
+          data: db/data.sql # 配置则生效,自动初始化数据
+          continue-on-error: true # 默认true,初始化失败是否继续
+          separator: ";" # sql默认分号分隔符
 
   aop:
     proxy-target-class: true
@@ -56,7 +53,7 @@ spring:
   redis:
     host: 127.0.0.1
     port: 6379
-    password:
+    password: 
     jedis:
       pool:
         min-idle: 8
