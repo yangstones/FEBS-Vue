@@ -3,7 +3,6 @@ package cc.mrbird.febs.common.config;
 import cc.mrbird.febs.common.properties.FebsProperties;
 import cc.mrbird.febs.common.properties.SwaggerProperties;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import springfox.documentation.builders.PathSelectors;
@@ -12,7 +11,6 @@ import springfox.documentation.service.ApiInfo;
 import springfox.documentation.service.Contact;
 import springfox.documentation.spi.DocumentationType;
 import springfox.documentation.spring.web.plugins.Docket;
-import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
 import java.util.Collections;
 
@@ -21,8 +19,13 @@ import java.util.Collections;
 */
 @Configuration
 public class FebsConfig {
+
+    private final FebsProperties properties;
+
     @Autowired
-    private FebsProperties properties;
+    public FebsConfig(FebsProperties febsProperties) {
+        this.properties = febsProperties;
+    }
 
     @Bean
     public Docket swaggerApi() {

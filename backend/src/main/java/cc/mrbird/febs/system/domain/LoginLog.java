@@ -2,7 +2,6 @@ package cc.mrbird.febs.system.domain;
 
 import com.baomidou.mybatisplus.annotation.TableName;
 import lombok.Data;
-import lombok.ToString;
 
 import java.util.Date;
 
