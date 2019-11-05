@@ -91,11 +91,6 @@ febs:
     batch:
       insert:
         num: 1000
-  shiro:
-    # 后端免认证接口 url
-    anonUrl: /login,/logout/**,/regist,/user/check/**,/swagger-resources/**,/webjars/**,/v2/**,/swagger-ui.html/**,/favicon.ico
-    # token有效期，单位秒
-    jwtTimeOut: 3600
   # Swagger相关配置
   swagger:
     basePackage: cc.mrbird.febs
@@ -107,3 +102,4 @@ febs:
     email: 852252810@qq.com
     license: Apache 2.0
     licenseUrl: https://www.apache.org/licenses/LICENSE-2.0.html
+    enable: false

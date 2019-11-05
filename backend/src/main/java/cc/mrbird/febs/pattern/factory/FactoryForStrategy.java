@@ -11,12 +11,12 @@ import java.util.concurrent.ConcurrentHashMap;
 public class FactoryForStrategy {
 
     @Autowired
-    Map<String, Strategy> strategys = new ConcurrentHashMap<>(3);
+    Map<String, Strategy> strategies = new ConcurrentHashMap<>(3);
 
-    public Strategy getStrategy(String compoment) throws Exception {
-        Strategy strategy = strategys.get(compoment);
-        if (strategy != null) {
-            throw new RuntimeException("no trategy defined");
+    public Strategy getStrategy(String strategyName) {
+        Strategy strategy = strategies.get(strategyName);
+        if (strategy == null) {
+            throw new RuntimeException("no strategy defined");
         }
         return strategy;
     }

@@ -3,6 +3,7 @@ package cc.mrbird.febs.common.config;
 import cc.mrbird.febs.common.properties.FebsProperties;
 import cc.mrbird.febs.common.properties.SwaggerProperties;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import springfox.documentation.builders.PathSelectors;
@@ -19,7 +20,6 @@ import java.util.Collections;
 * @author wx
 */
 @Configuration
-@EnableSwagger2
 public class FebsConfig {
     @Autowired
     private FebsProperties properties;
@@ -28,6 +28,7 @@ public class FebsConfig {
     public Docket swaggerApi() {
         SwaggerProperties swagger = properties.getSwagger();
         return new Docket(DocumentationType.SWAGGER_2)
+                .enable(swagger.isEnable())
                 .select()
                 .apis(RequestHandlerSelectors.basePackage(swagger.getBasePackage()))
                 .paths(PathSelectors.any())

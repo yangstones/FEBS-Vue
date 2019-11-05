@@ -16,4 +16,5 @@ public class SwaggerProperties {
     private String email;
     private String license;
     private String licenseUrl;
+    private boolean enable;
 }
