@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>org.apache.shiro.web.filter.PathMatchingFilter</OriginalElement>
+  <nodes>
+    <node x="718.25" y="76.0">org.apache.shiro.web.servlet.AbstractFilter</node>
+    <node x="789.75" y="152.0">org.apache.shiro.web.servlet.NameableFilter</node>
+    <node x="363.25" y="608.0">org.apache.shiro.web.filter.authc.PassThruAuthenticationFilter</node>
+    <node x="269.0" y="684.0">org.apache.shiro.web.filter.authc.FormAuthenticationFilter</node>
+    <node x="274.25" y="532.0">org.apache.shiro.web.filter.authc.AuthenticationFilter</node>
+    <node x="70.0" y="760.0">cc.mrbird.febs.common.authentication.JWTFilter</node>
+    <node x="774.0" y="0.0">org.apache.shiro.web.servlet.ServletContextSupport</node>
+    <node x="480.25" y="532.0">org.apache.shiro.web.filter.authc.UserFilter</node>
+    <node x="0.0" y="684.0">org.apache.shiro.web.filter.authc.BasicHttpAuthenticationFilter</node>
+    <node x="882.25" y="76.0">org.apache.shiro.util.Nameable</node>
+    <node x="616.25" y="532.0">org.apache.shiro.web.filter.authz</node>
+    <node x="439.2261904761905" y="456.0">org.apache.shiro.web.filter.AccessControlFilter</node>
+    <node x="768.75" y="228.0">org.apache.shiro.web.servlet.OncePerRequestFilter</node>
+    <node x="796.75" y="304.0">org.apache.shiro.web.servlet.AdviceFilter</node>
+    <node x="590.75" y="304.0">org.apache.shiro.web.filter.PathConfigProcessor</node>
+    <node x="809.2261904761905" y="456.0">org.apache.shiro.web.filter.session.NoSessionCreationFilter</node>
+    <node x="638.2261904761905" y="456.0">org.apache.shiro.web.filter.authc.AnonymousFilter</node>
+    <node x="637.25" y="380.0">org.apache.shiro.web.filter.PathMatchingFilter</node>
+    <node x="666.0" y="0.0">javax.servlet.Filter</node>
+    <node x="829.25" y="380.0">org.apache.shiro.web.filter.authc.LogoutFilter</node>
+    <node x="157.25" y="608.0">org.apache.shiro.web.filter.authc.AuthenticatingFilter</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="org.apache.shiro.web.servlet.AbstractFilter" target="org.apache.shiro.web.servlet.ServletContextSupport">
+      <point x="36.0" y="-13.0" />
+      <point x="826.25" y="51.0" />
+      <point x="870.5" y="51.0" />
+      <point x="0.0" y="13.0" />
+    </edge>
+    <edge source="org.apache.shiro.web.servlet.OncePerRequestFilter" target="org.apache.shiro.web.servlet.NameableFilter">
+      <point x="0.0" y="-13.0" />
+      <point x="0.0" y="13.0" />
+    </edge>
+    <edge source="org.apache.shiro.web.filter.authc.UserFilter" target="org.apache.shiro.web.filter.AccessControlFilter">
+      <point x="0.0" y="-13.0" />
+      <point x="538.25" y="507.0" />
+      <point x="528.7261904761905" y="507.0" />
+      <point x="0.0" y="13.0" />
+    </edge>
+    <edge source="org.apache.shiro.web.servlet.AdviceFilter" target="org.apache.shiro.web.servlet.OncePerRequestFilter">
+      <point x="0.0" y="-13.0" />
+      <point x="0.0" y="13.0" />
+    </edge>
+    <edge source="cc.mrbird.febs.common.authentication.JWTFilter" target="org.apache.shiro.web.filter.authc.BasicHttpAuthenticationFilter">
+      <point x="0.0" y="-13.0" />
+      <point x="0.0" y="13.0" />
+    </edge>
+    <edge source="org.apache.shiro.web.filter.authc.BasicHttpAuthenticationFilter" target="org.apache.shiro.web.filter.authc.AuthenticatingFilter">
+      <point x="0.0" y="-13.0" />
+      <point x="124.5" y="659.0" />
+      <point x="203.75" y="659.0" />
+      <point x="-46.5" y="13.0" />
+    </edge>
+    <edge source="org.apache.shiro.web.servlet.NameableFilter" target="org.apache.shiro.util.Nameable">
+      <point x="36.0" y="-13.0" />
+      <point x="897.75" y="127.0" />
+      <point x="933.25" y="127.0" />
+      <point x="0.0" y="13.0" />
+    </edge>
+    <edge source="org.apache.shiro.web.filter.authc.PassThruAuthenticationFilter" target="org.apache.shiro.web.filter.authc.AuthenticationFilter">
+      <point x="0.0" y="-13.0" />
+      <point x="484.25" y="583.0" />
+      <point x="413.75" y="583.0" />
+      <point x="46.5" y="13.0" />
+    </edge>
+    <edge source="org.apache.shiro.web.filter.authc.AuthenticationFilter" target="org.apache.shiro.web.filter.AccessControlFilter">
+      <point x="0.0" y="-13.0" />
+      <point x="367.25" y="507.0" />
+      <point x="469.05952380952385" y="507.0" />
+      <point x="-59.666666666666686" y="13.0" />
+    </edge>
+    <edge source="org.apache.shiro.web.filter.authc.AuthenticatingFilter" target="org.apache.shiro.web.filter.authc.AuthenticationFilter">
+      <point x="0.0" y="-13.0" />
+      <point x="250.25" y="583.0" />
+      <point x="320.75" y="583.0" />
+      <point x="-46.5" y="13.0" />
+    </edge>
+    <edge source="org.apache.shiro.web.filter.session.NoSessionCreationFilter" target="org.apache.shiro.web.filter.PathMatchingFilter">
+      <point x="0.0" y="-13.0" />
+      <point x="912.7261904761905" y="431.0" />
+      <point x="780.5833333333334" y="431.0" />
+      <point x="57.33333333333337" y="13.0" />
+    </edge>
+    <edge source="org.apache.shiro.web.servlet.AbstractFilter" target="javax.servlet.Filter">
+      <point x="-36.0" y="-13.0" />
+      <point x="754.25" y="51.0" />
+      <point x="710.0" y="51.0" />
+      <point x="0.0" y="13.0" />
+    </edge>
+    <edge source="org.apache.shiro.web.filter.authz" target="org.apache.shiro.web.filter.AccessControlFilter">
+      <point x="0.0" y="-13.0" />
+      <point x="676.75" y="507.0" />
+      <point x="588.3928571428571" y="507.0" />
+      <point x="59.66666666666663" y="13.0" />
+    </edge>
+    <edge source="org.apache.shiro.web.filter.authc.LogoutFilter" target="org.apache.shiro.web.servlet.AdviceFilter">
+      <point x="0.0" y="-13.0" />
+      <point x="32.5" y="13.0" />
+    </edge>
+    <edge source="org.apache.shiro.web.filter.PathMatchingFilter" target="org.apache.shiro.web.filter.PathConfigProcessor">
+      <point x="-43.0" y="-13.0" />
+      <point x="0.0" y="13.0" />
+    </edge>
+    <edge source="org.apache.shiro.web.filter.authc.FormAuthenticationFilter" target="org.apache.shiro.web.filter.authc.AuthenticatingFilter">
+      <point x="0.0" y="-13.0" />
+      <point x="376.0" y="659.0" />
+      <point x="296.75" y="659.0" />
+      <point x="46.5" y="13.0" />
+    </edge>
+    <edge source="org.apache.shiro.web.filter.PathMatchingFilter" target="org.apache.shiro.web.servlet.AdviceFilter">
+      <point x="43.0" y="-13.0" />
+      <point x="766.25" y="355.0" />
+      <point x="829.25" y="355.0" />
+      <point x="-32.5" y="13.0" />
+    </edge>
+    <edge source="org.apache.shiro.web.servlet.NameableFilter" target="org.apache.shiro.web.servlet.AbstractFilter">
+      <point x="-36.0" y="-13.0" />
+      <point x="825.75" y="127.0" />
+      <point x="790.25" y="127.0" />
+      <point x="0.0" y="13.0" />
+    </edge>
+    <edge source="org.apache.shiro.web.filter.authc.AnonymousFilter" target="org.apache.shiro.web.filter.PathMatchingFilter">
+      <point x="0.0" y="-13.0" />
+      <point x="713.7261904761905" y="431.0" />
+      <point x="723.25" y="431.0" />
+      <point x="0.0" y="13.0" />
+    </edge>
+    <edge source="org.apache.shiro.web.filter.AccessControlFilter" target="org.apache.shiro.web.filter.PathMatchingFilter">
+      <point x="0.0" y="-13.0" />
+      <point x="528.7261904761905" y="431.0" />
+      <point x="665.9166666666666" y="431.0" />
+      <point x="-57.33333333333337" y="13.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="1.0" x="523.0" y="169.0" />
+  <SelectedNodes>
+    <node>org.apache.shiro.web.filter.PathMatchingFilter</node>
+  </SelectedNodes>
+  <Categories />
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+
